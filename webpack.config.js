@@ -17,8 +17,9 @@ const commonConfig = {
         },
       },
       {
-        test: /\.tsx?$/,
-        loader: "ts-loader",
+        test: /\.(js|jsx|tsx|ts)$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
       },
     ],
   },
@@ -27,7 +28,7 @@ const commonConfig = {
   },
 }
 
-module.exports - Object.assign(
+module.exports = Object.assign(
   {
     entry: {main: "./src/main.ts"},
   },

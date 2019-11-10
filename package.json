@@ -9,18 +9,20 @@
     "build": "webpack --mode development --config webpack.config.js"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
     "babel-loader": "^8.0.6",
-    "babel-preset-es2015-node": "^6.1.1",
-    "babel-preset-react": "^6.24.1",
     "standard": "^14.3.1",
     "standard-loader": "^7.0.0",
-    "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
     "tslint-config-standard": "^9.0.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
-  }
+  },
+  "dependencies": {}
 }
