@@ -1,8 +1,8 @@
-import {resolve as _resolve} from "path";
+const path = require("path");
 
 const commonConfig = {
   output: {
-    path: _resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
   module: {

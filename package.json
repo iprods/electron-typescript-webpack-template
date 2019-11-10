@@ -2,12 +2,11 @@
   "name": "electron-typescript-webpack-template",
   "version": "0.1.0",
   "description": "Electron based on Webpack with Typescript support",
-  "main": "index.js",
   "author": "Flo Schuessel <fs@iprods.org>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --mode development --config webpack.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -21,6 +20,7 @@
     "tslint-config-standard": "^9.0.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.7.2",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
