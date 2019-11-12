@@ -1,5 +1,4 @@
 import { app, BrowserWindow } from 'electron'
-declare var __dirname: string
 let mainWindow: Electron.BrowserWindow
 
 const onReady = () => {
@@ -10,8 +9,7 @@ const onReady = () => {
       nodeIntegration: true
     }
   })
-  const fileName = `file://${__dirname}/index.html`
-  mainWindow.loadURL(fileName)
+  mainWindow.loadURL(UI_MAIN_WINDOW_WEBPACK_ENTRY)
   mainWindow.on('close', () => app.quit())
 }
 
