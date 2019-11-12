@@ -5,6 +5,9 @@ const commonConfig = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
+  node: {
+    __dirname: false,
+  },
   module: {
     rules: [
       {
@@ -28,9 +31,21 @@ const commonConfig = {
   },
 }
 
-module.exports = Object.assign(
-  {
-    entry: {main: "./src/main.ts"},
-  },
-  commonConfig
-);
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = [
+  Object.assign(
+    {
+      target: "electron-main",
+      entry: {main: "./src/main.ts"},
+    },
+    commonConfig
+  ),
+  Object.assign(
+    {
+      target: "electron-renderer",
+      entry: {gui: "./src/gui.ts"},
+      plugins: [new HtmlWebpackPlugin()],
+    }
+  ),
+];

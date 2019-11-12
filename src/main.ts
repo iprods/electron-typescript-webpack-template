@@ -1,8 +1,20 @@
-export class MyClass {
-  add(a: number, b: number): number {
-    return a + b
-  }
+import { app, BrowserWindow } from 'electron'
+declare var __dirname: string
+let mainWindow: Electron.BrowserWindow
+
+const onReady = () => {
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  })
+  const fileName = `file://${__dirname}/index.html`
+  mainWindow.loadURL(fileName)
+  mainWindow.on('close', () => app.quit())
 }
 
-const myClass: MyClass = new MyClass()
-console.log(myClass.add(2, 3))
+app.on('ready', () => onReady())
+app.on('window-all-closed', () => app.quit())
+console.log(`Electron version ${app.getVersion()}`)
