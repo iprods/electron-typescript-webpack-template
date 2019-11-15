@@ -1,6 +1,12 @@
 import { app, BrowserWindow } from 'electron'
 import isDev from 'electron-is-dev'
 
+/**
+ * This file is the main entry point for the Electron app.
+ *
+ * It orchestrates all windows and their event listeners.
+ */
+
 let mainWindow: Electron.BrowserWindow
 
 const onReady = () => {
@@ -13,7 +19,7 @@ const onReady = () => {
   })
   mainWindow.loadURL(UI_MAIN_WINDOW_WEBPACK_ENTRY)
   if (isDev) {
-    console.info('Loading in dev mode')
+    printDevInfo()
     mainWindow.webContents.openDevTools()
   }
   mainWindow.on('close', () => app.quit())
@@ -21,4 +27,22 @@ const onReady = () => {
 
 app.on('ready', () => onReady())
 app.on('window-all-closed', () => app.quit())
-console.log(`Electron version ${app.getVersion()}`)
+
+const printDevInfo = () => {
+  console.info(`
+Loading in dev mode
+
+${app.name}
+
+App version:      ${app.getVersion()}
+Electron version: ${process.versions.electron}
+Chrome version:   ${process.versions.chrome}
+V8 version:       ${process.versions.v8}
+NodeJS version:   ${process.version}
+
+App path:         ${app.getAppPath()}
+User data path:   ${app.getPath('userData')}
+
+In order to reload the app type "rs"
+  `)
+}
