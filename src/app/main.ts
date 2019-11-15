@@ -1,4 +1,6 @@
-import { app, BrowserWindow } from 'electron'
+import {app, BrowserWindow} from 'electron'
+import isDev from 'electron-is-dev'
+
 let mainWindow: Electron.BrowserWindow
 
 const onReady = () => {
@@ -10,6 +12,10 @@ const onReady = () => {
     }
   })
   mainWindow.loadURL(UI_MAIN_WINDOW_WEBPACK_ENTRY)
+  if (isDev) {
+    console.info('Loading in dev mode')
+    mainWindow.webContents.openDevTools()
+  }
   mainWindow.on('close', () => app.quit())
 }
 
