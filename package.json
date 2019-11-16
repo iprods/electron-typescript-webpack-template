@@ -5,12 +5,19 @@
   "author": "Flo Schuessel <fs@iprods.org>",
   "license": "MIT",
   "private": false,
+  "maintainers": [
+    {
+      "name": "Flo Schuessel",
+      "email": "fs@iprods.org",
+      "url": "https://github.com/scflode"
+    }
+  ],
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "tslint --project tsconfig.json 'src/**/*.ts'"
   },
   "main": "./dist/main.js",
   "config": {
@@ -85,6 +92,7 @@
     "style-loader": "^0.23.1",
     "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^9.0.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.7.2",
