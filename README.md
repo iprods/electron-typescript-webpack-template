@@ -7,13 +7,13 @@ Typescript support.
 
 The target of the boilerplate is to have
 
-* a running Electron app
-* Typescript support built in
-* Webpack on board
-* Tailwind configured
-* hot module reloading
-* testing setup for unit tests
-* testing setup for e2e testing
+[x] a running Electron app
+[x] Typescript support built in
+[x] Webpack on board
+[ ] Tailwind configured
+[x] hot module reloading
+[ ] testing setup for unit tests
+[ ] testing setup for e2e testing
 
 ## Prerequisites
 

@@ -1,2 +1,9 @@
-const bodyElement = document.getElementsByTagName('body')[0]
-bodyElement.innerHTML = `node version: ${process.versions.node}`
+import {remote} from 'electron'
+import '../../assets/base.css'
+
+const app = remote.app
+
+const versionElement = document.querySelector('#version')
+if (versionElement) {
+  versionElement.textContent = `v${app.getVersion()}`
+}
