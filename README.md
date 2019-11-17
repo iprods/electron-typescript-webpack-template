@@ -15,11 +15,28 @@ The target of the boilerplate is to have
 - [ ] testing setup for unit tests
 - [ ] testing setup for e2e testing
 
+## Usage
+
+In order to use this template you can simply clone it or use the template
+functionality of GitHub.
+
+Then run `yarn` and after all dependencies have been installed use `yarn start`
+to run the app in development mode.
+
 ## Prerequisites
 
-* NodeJS 11.15.0
+* NodeJS 11.15.0 (see Known issues)
 
 ## Known issues
+
+### Hot Module Reload
+
+Though Webpack is setup with this template you will need to reload the app
+manually to see the changes of the screens (renderer).
+
+In order to reflect changes in the main process you have to either restart the
+build process via `yarn start` or type `rs` in the terminal you started the
+build process.
 
 ### FSEvents
 
@@ -35,3 +52,9 @@ This project is based on the groundwork of
 * https://blog.scottlogic.com/2017/06/06/typescript-electron-webpack.html
 * https://github.com/kontrollanten/electron-webpack-quick-start
 * https://github.com/electron-userland/electron-webpack-quick-start
+
+## License
+
+MIT
+
+See [LICENSE.md](License)
