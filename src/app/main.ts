@@ -11,6 +11,7 @@ let mainWindow: Electron.BrowserWindow
 
 const onReady = () => {
   mainWindow = new BrowserWindow({
+    show: false,
     width: 800,
     height: 600,
     webPreferences: {
@@ -22,6 +23,11 @@ const onReady = () => {
     printDevInfo()
     mainWindow.webContents.openDevTools()
   }
+
+  mainWindow.on('ready-to-show', () => {
+    mainWindow.show()
+  })
+
   mainWindow.on('close', () => app.quit())
 }
 

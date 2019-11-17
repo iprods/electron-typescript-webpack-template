@@ -5,6 +5,7 @@
     "tslint-config-prettier"
   ],
   "rules": {
+    "import-spacing": true,
     "object-literal-sort-keys": false,
     "no-console": false,
     "no-floating-promises": false,
