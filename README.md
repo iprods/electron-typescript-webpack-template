@@ -57,4 +57,4 @@ This project is based on the groundwork of
 
 MIT
 
-See [LICENSE.md](License)
+See [License](LICENSE.md)
