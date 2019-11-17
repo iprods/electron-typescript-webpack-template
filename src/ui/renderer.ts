@@ -6,7 +6,8 @@ const app = remote.app
 
 const openLinkInBrowser = (e: Event) => {
   const el = e.target as HTMLElement
-  shell.openExternal(el.dataset.repoLink)
+  const link = el.dataset.repoLink as string
+  shell.openExternal(link)
 };
 
 const versionElement = document.querySelector('#version')
