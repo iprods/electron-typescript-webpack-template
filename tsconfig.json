@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "outDir": "build",
     "target": "es2015",
     "moduleResolution": "node",
     "pretty": true,

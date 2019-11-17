@@ -1,6 +1,8 @@
 import { app, BrowserWindow } from 'electron'
 import isDev from 'electron-is-dev'
 
+declare var UI_MAIN_WINDOW_WEBPACK_ENTRY: string
+
 /**
  * This file is the main entry point for the Electron app.
  *
