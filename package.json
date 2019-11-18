@@ -19,7 +19,7 @@
     "publish": "electron-forge publish",
     "lint": "tslint --project tsconfig.json 'src/**/*.ts'"
   },
-  "main": "./dist/main.js",
+  "main": "./build/main.js",
   "config": {
     "forge": {
       "packagerConfig": {},
