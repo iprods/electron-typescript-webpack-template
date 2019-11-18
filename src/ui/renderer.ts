@@ -1,6 +1,6 @@
 import {remote, shell} from 'electron';
 import '../../assets/base.css';
-import Screen from '../modules/screen';
+import * as Screen from '../modules/screen';
 
 const app = remote.app
 
