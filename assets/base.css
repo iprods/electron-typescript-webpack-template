@@ -2,4 +2,12 @@
 
 @tailwind components;
 
+/* Make the UI not selectable and draggable */
+*, *::after, *::before {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
+}
+
 @tailwind utilities;
