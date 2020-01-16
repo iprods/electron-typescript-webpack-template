@@ -1,6 +1,6 @@
 {
   "name": "electron-typescript-webpack-template",
-  "version": "0.2.1",
+  "version": "0.3.0-dev",
   "description": "Electron based on Webpack with Typescript support",
   "author": "Flo Schuessel <fs@iprods.org>",
   "license": "MIT",
