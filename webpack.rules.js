@@ -16,25 +16,13 @@ module.exports = [
     },
   },
   {
-    test: /\.ts$/,
-    include: path.resolve(__dirname, 'src'),
-    enforce: 'pre',
-    use: {
-      loader: 'tslint-loader',
-      options: {
-        typeCheck: true,
-        emitErrors: true,
-      },
-    },
-  },
-  {
-    test: /\.(js|jsx|tsx|ts)$/,
-    include: path.resolve(__dirname, 'src'),
+    test: /\.tsx?$/,
+    exclude: /(node_modules|\.webpack)/,
     use: {
       loader: 'ts-loader',
       options: {
-        transpileOnly: true,
-      },
-    },
+        transpileOnly: true
+      }
+    }
   },
 ];
