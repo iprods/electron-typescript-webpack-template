@@ -3,6 +3,7 @@
 ## 0.3.0
 
 * Make app feel more native
+* Switch from tslint to eslint
 
 ## 0.2.1
 
