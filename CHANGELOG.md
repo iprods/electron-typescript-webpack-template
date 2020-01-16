@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+* Upgrade Webpack which fixes https://github.com/advisories/GHSA-h9rv-jmmf-4pgx
+
 ## 0.2.0
 
 * Improve and cleanup typescript configuration
