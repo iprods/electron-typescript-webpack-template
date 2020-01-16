@@ -1,7 +1,8 @@
 import { app, BrowserWindow } from 'electron'
 import isDev from 'electron-is-dev'
+import printDevInfo from '../modules/print-dev-info'
 
-declare var UI_MAIN_WINDOW_WEBPACK_ENTRY: string
+declare let UI_MAIN_WINDOW_WEBPACK_ENTRY: string
 
 /**
  * This file is the main entry point for the Electron app.
@@ -11,7 +12,7 @@ declare var UI_MAIN_WINDOW_WEBPACK_ENTRY: string
 
 let mainWindow: Electron.BrowserWindow
 
-const onReady = () => {
+const onReady = (): void => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 800,
@@ -22,7 +23,7 @@ const onReady = () => {
   })
   mainWindow.loadURL(UI_MAIN_WINDOW_WEBPACK_ENTRY)
   if (isDev) {
-    printDevInfo()
+    printDevInfo(app, process)
     mainWindow.webContents.openDevTools()
   }
 
@@ -36,21 +37,3 @@ const onReady = () => {
 app.on('ready', () => onReady())
 app.on('window-all-closed', () => app.quit())
 
-const printDevInfo = () => {
-  console.info(`
-Loading in dev mode
-
-${app.name}
-
-App version:      ${app.getVersion()}
-Electron version: ${process.versions.electron}
-Chrome version:   ${process.versions.chrome}
-V8 version:       ${process.versions.v8}
-NodeJS version:   ${process.version}
-
-App path:         ${app.getAppPath()}
-User data path:   ${app.getPath('userData')}
-
-In order to reload the app type "rs"
-  `)
-}

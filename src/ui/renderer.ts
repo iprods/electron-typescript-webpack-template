@@ -4,9 +4,9 @@ import * as Screen from '../modules/screen';
 
 const app = remote.app
 
-const openLinkInBrowser = (e: Event) => {
+const openLinkInBrowser = (e: Event): void => {
   const el = e.target as HTMLElement
-  const link = el.dataset.repoLink as string
+  const link = el.dataset.repoLink
   shell.openExternal(link)
 };
 
