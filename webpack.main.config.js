@@ -3,12 +3,13 @@ module.exports = {
    * This is the main entry point for your application, it's the first file
    * that runs in the main process.
    */
-  entry: './src/app/main.ts',
+  entry: "./src/app/main.ts",
   // Put your normal webpack config below here
   module: {
-    rules: require('./webpack.rules'),
+    rules: require("./webpack.rules"),
   },
   resolve: {
-    extensions: [".js", ".ts", ".tsx", ".jsx", ".json", ".css"],
+    extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".json"],
   },
 };
+
