@@ -1,59 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Electron with Webpack and Typescript support</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Electron with Webpack and Typescript support</title>
-</head>
-
-<body class="px-2 py-2 h-screen" style="display: none">
-  <header class="flex justify-between">
-    <p>Welcome</p>
-    <a id="repoLink"
-      class="px-2 py-1 text-xs font-semibold shadow rounded bg-blue-600 hover:bg-blue-500 text-gray-200 hover:text-gray-100"
-      data-repo-link="https://github.com/iprods/electron-typescript-webpack-template">GitHub</a>
-  </header>
-  <main class="pt-2">
-    <h1 class="font-bold text-xl">Electron with Webpack and Typescript support</h1>
-    <p class="mt-4">This template app provides you with the following goodies:</p>
-    <ul class="mt-2">
-      <li class="text-sm">
-        <svg class="inline h-6 w-6 text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="32" fill="currentColor" />
-          <path
-            d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z" />
-        </svg>
-        Electron with Dev mode
-      </li>
-      <li class="text-sm">
-        <svg class="inline h-6 w-6 text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="32" fill="currentColor" />
-          <path
-            d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z" />
-        </svg>
-        Webpack support
-      </li>
-      <li class="text-sm">
-        <svg class="inline h-6 w-6 text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="32" fill="currentColor" />
-          <path
-            d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z" />
-        </svg>
-        Typescript support with linting and HMR
-      </li>
-      <li class="text-sm">
-        <svg class="inline h-6 w-6 text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="32" fill="currentColor" />
-          <path
-            d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z" />
-        </svg>
-        TailwindCSS for easy layouting
-      </li>
-    </ul>
-  </main>
-  <footer class="absolute bottom-0">
-    <span id="version" class="text-xs"></span>
-  </footer>
-</body>
-
+  <body class="h-screen px-2 py-2" style="display: none">
+    <header class="flex justify-between">
+      <p>Welcome</p>
+      <a
+        id="repoLink"
+        class="px-2 py-1 text-xs font-semibold text-gray-200 bg-blue-600 rounded shadow hover:bg-blue-500 hover:text-gray-100"
+        data-repo-link="https://github.com/iprods/electron-typescript-webpack-template"
+        >GitHub</a
+      >
+    </header>
+    <main class="pt-2">
+      <h1 class="text-xl font-bold">
+        Electron with Webpack and Typescript support
+      </h1>
+      <p class="mt-4">
+        This template app provides you with the following goodies:
+      </p>
+      <ul class="mt-2">
+        <li class="text-sm">
+          <svg
+            class="inline w-6 h-6 text-gray-200"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
+            <circle cx="50" cy="50" r="32" fill="currentColor" />
+            <path
+              d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z"
+            />
+          </svg>
+          Electron with Dev mode
+        </li>
+        <li class="text-sm">
+          <svg
+            class="inline w-6 h-6 text-gray-200"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
+            <circle cx="50" cy="50" r="32" fill="currentColor" />
+            <path
+              d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z"
+            />
+          </svg>
+          Webpack support
+        </li>
+        <li class="text-sm">
+          <svg
+            class="inline w-6 h-6 text-gray-200"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
+            <circle cx="50" cy="50" r="32" fill="currentColor" />
+            <path
+              d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z"
+            />
+          </svg>
+          Typescript support with linting and HMR
+        </li>
+        <li class="text-sm">
+          <svg
+            class="inline w-6 h-6 text-gray-200"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
+            <circle cx="50" cy="50" r="32" fill="currentColor" />
+            <path
+              d="M44.869 61.394l-10.4-10.4a1.6 1.6 0 010-2.263l2.262-2.262a1.6 1.6 0 012.263 0L46 53.474 61.006 38.47a1.6 1.6 0 012.263 0l2.262 2.262a1.6 1.6 0 010 2.263l-18.4 18.4a1.6 1.6 0 01-2.262 0z"
+            />
+          </svg>
+          Tailwind CSS for easy layouting
+        </li>
+      </ul>
+    </main>
+    <footer class="absolute bottom-0">
+      <span id="version" class="text-xs"></span>
+    </footer>
+  </body>
 </html>
