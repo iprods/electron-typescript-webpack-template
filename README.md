@@ -25,7 +25,7 @@ to run the app in development mode.
 
 ## Prerequisites
 
-- NodeJS
+- NodeJS (>= 12.8.x LTS)
 
 ## Known issues
 
