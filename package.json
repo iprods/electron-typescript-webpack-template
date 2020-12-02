@@ -1,8 +1,8 @@
 {
   "name": "electron-ts-webpack",
   "productName": "electron-ts-webpack",
-  "version": "0.3.0-dev",
-  "description": "My Electron application description",
+  "version": "0.3.0",
+  "description": "A Electron template with support for Typescript, Webpack and Tailwind CSS",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
