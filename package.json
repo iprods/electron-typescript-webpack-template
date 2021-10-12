@@ -74,7 +74,7 @@
     "@typescript-eslint/parser": "^4.0.1",
     "autoprefixer": "^10.0.4",
     "css-loader": "^4.3.0",
-    "electron": "^11.1.0",
+    "electron": "^11.5.0",
     "electron-is-dev": "^1.2.0",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "^2.20.0",
